@@ -1,0 +1,55 @@
+<meta charset="UTF-8">
+
+
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    function azar(n) {
+
+        	return Math.round(Math.random()*n);
+    }
+
+    var contador = 1;
+   	var numeroAzar = azar(10);
+
+  	
+
+  	while (numeroIngresado != numeroAzar) { 
+  		var numeroIngresado = parseInt(prompt("Ingrese un numero, tiene 3 intentos para adivinar:"));
+  		
+
+    	if (numeroIngresado == numeroAzar) {
+    		alert("Has acertado, el numero era: " + numeroAzar);
+    		alert("Y lo hiciste en " + contador + " intentos.");
+    	  
+    	} else {
+    			alert("Has fallado, sigue intentando");
+
+    		} 
+
+
+    		if (contador == 3){  
+    		alert("Utilizaste los 3 intentos disponibles");
+    				break;
+    				}
+
+
+    		contador++; 
+
+    			}
+
+    	alert("Fin.")
+    	
+    
+
+	
+    
+</script>

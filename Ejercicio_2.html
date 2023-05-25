@@ -1,0 +1,54 @@
+<canvas width="600" height="400"> </canvas>
+
+<script>
+
+	var pantalla = document.querySelector("canvas");
+	var pincel = pantalla.getContext("2d");
+	pincel.fillStyle = "lightgrey";
+	pincel.fillRect(0,0,600,400);
+
+
+function dibujarCirculo(x,y,radio,color){
+	pincel.fillStyle = color;
+	pincel.beginPath();
+	pincel.arc(x,y, radio, 0, 2*3.14)
+	pincel.fill();
+}
+
+dibujarCirculo(300,200,20,"red");
+dibujarCirculo(300,160,20,"yellow");
+dibujarCirculo(300,240,20,"blue");
+dibujarCirculo(340,200,20,"black");
+dibujarCirculo(260,200,20,"orange");
+
+/*
+function dibujarCuadrado(x,y,color){
+	var pantalla = document.querySelector("canvas"); //Llamar lo que este afuera del script
+	var pincel = pantalla.getContext("2d"); // Las dimensiones en las que voy a trabajar
+	pincel.fillStyle = color; //El color que quiero 
+	pincel.fillRect(x,y,50,50); 
+	pincel.strokeStyle = "black";
+	pincel.strokeRect(x,y,50,50);
+}
+
+x = 0;
+
+while (x < 600) {
+
+dibujarCuadrado(0,0,"red");
+dibujarCuadrado(50,0,"yellow");
+dibujarCuadrado(100,0,"green");
+
+}
+
+
+for (var i = 0; i < 600; i = i + 50) {
+	dibujarCuadrado(i,0,"red");
+	dibujarCuadrado(i,50,"yellow");
+	dibujarCuadrado(i,100,"green");
+
+}
+*/
+
+
+</script>
